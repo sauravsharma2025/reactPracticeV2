@@ -72,6 +72,14 @@ export const GetProfile = () => {
                   pathname: "/getRepoData",
                   state: "data", // your data array of objects
                 }}
+                state={{
+                  id: item.id,
+                  name: item.name,
+                  fork: item.fork,
+                  visibility: item.fork,
+                  default_branch: item.default_branch,
+                  description: item.description,
+                }}
               >
                 <GitRepo
                   key={item.id}
