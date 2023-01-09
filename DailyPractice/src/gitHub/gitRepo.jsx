@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 export const GitRepo = ({
   id,
   name,
@@ -8,15 +7,29 @@ export const GitRepo = ({
   description,
 }) => {
   return (
-    <>
-      <span key={id}>
-        <li>'Repo Name {name}</li>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div
+        key={id}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          width: "30%",
+          textAlign: "center",
+          flexWrap: "wrap",
+          margin: "10px",
+          padding: "10px",
+          border: "1px solid black",
+          backgroundColor: "antiquewhite",
+          justifyContent: "center",
+        }}
+      >
+        <div>Repo Name {name}</div>
 
-        <li>Fork{fork}</li>
-        <li>Visibilty:{visibility}</li>
-        <li>Default Branch:{default_branch}</li>
-        <li>Description:{description}</li>
-      </span>
-    </>
+        <div>Fork{fork}</div>
+        <div>Visibilty:{visibility}</div>
+        <div>Default Branch:{default_branch}</div>
+        <div>Description:{description}</div>
+      </div>
+    </div>
   );
 };

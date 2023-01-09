@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { GitRepo } from "./gitRepo";
+
 export function Profile() {
   const location = useLocation();
   const { id, name, fork, visibility, default_branch, description } =
@@ -18,3 +19,7 @@ export function Profile() {
     </>
   );
 }
+
+export const GetUserProfile = () => {
+  return "hello from getUserProfile";
+};
