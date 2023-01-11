@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import { CoreApp } from "./gitHub/CoreApp";
-import { GetProfile } from "./gitHub/gitHub";
-import { GoogleForm } from "./googleForm/googleForm";
-import { Counter, MainComp } from "./HOC/hocExample";
-import Home from "./practiceRouter/Home";
-import Error from "./practiceRouter/Error";
+
+import Firstblacktheme from "./blackTheme/First";
+import { RouteSet } from "./blackTheme/navigation/routes";
+
+import { Third } from "./blackTheme/Third";
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // const router = createBrowserRouter([
 //   {
@@ -19,4 +17,4 @@ import Error from "./practiceRouter/Error";
 //     element: <Error />,
 //   },
 // ]);
-ReactDOM.createRoot(document.getElementById("root")).render(<CoreApp />);
+ReactDOM.createRoot(document.getElementById("root")).render(<RouteSet />);

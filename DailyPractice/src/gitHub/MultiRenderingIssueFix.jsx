@@ -8,9 +8,7 @@ const MultiRenderingIssueFix = () => {
   return (
     <>
       <p>Profile Details</p>
-      <p>
-        {profile.id}-{profile.name}
-      </p>
+      <p>{profile}</p>
     </>
   );
 };

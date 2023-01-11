@@ -21,5 +21,10 @@ export function Profile() {
 }
 
 export const GetUserProfile = () => {
-  return "hello from getUserProfile";
+  let mydata = fetch("https://api.github.com/users/xdankit")
+    .then((data) => data.json())
+    .then((data) => {
+      return data.name;
+    });
+  return mydata;
 };

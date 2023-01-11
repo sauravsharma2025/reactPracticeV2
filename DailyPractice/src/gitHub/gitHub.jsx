@@ -22,14 +22,13 @@ export const GetProfile = () => {
         .then((data) => setuserInfo(data));
     }
   }, [fetchData]);
-
   console.log("SK@", follower);
   const showMeRepo = (repoId) => {
     userInfo.map((item) => {
       if (item.id === repoId) {
         console.log("SK@i am inside");
 
-        setRepoData((pre) => [...pre, item]);
+        setRepoData((pre) => [item]);
       }
     });
   };

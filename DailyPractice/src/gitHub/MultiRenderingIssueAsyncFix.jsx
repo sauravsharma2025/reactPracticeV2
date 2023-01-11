@@ -1,17 +1,10 @@
 import { useLoaderData } from "react-router-dom";
-
-const MultiRenderingIssueAsyncFix = () => {
+const MultiRenderingIssueFix = () => {
   const profile = useLoaderData();
-  console.log("Re-render");
-
+  console.log("re-Render");
   return (
     <>
-      <p>Profile Details</p>
-      <p>
-        {profile.id}-{profile.name}
-      </p>
+      <p>Profile Detail</p>
     </>
   );
 };
-
-export default MultiRenderingIssueAsyncFix;
