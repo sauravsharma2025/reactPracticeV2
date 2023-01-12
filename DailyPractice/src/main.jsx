@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import Firstblacktheme from "./blackTheme/First";
 import { RouteSet } from "./blackTheme/navigation/routes";
 
 import { Third } from "./blackTheme/Third";
+import Dat19PerformanceIssueFixed from "./performance/optimise";
+import WithStyledComponentExample from "./performance/StyleComponent";
+import Dat19PerformanceIssue from "./performance/test";
+import UseIdExample from "./performance/uniqueId";
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // const router = createBrowserRouter([
 //   {
@@ -17,4 +20,6 @@ import { Third } from "./blackTheme/Third";
 //     element: <Error />,
 //   },
 // ]);
-ReactDOM.createRoot(document.getElementById("root")).render(<RouteSet />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <WithStyledComponentExample />
+);
