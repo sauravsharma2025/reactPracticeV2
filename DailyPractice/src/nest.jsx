@@ -43,21 +43,18 @@ export const ParentComponent = () => {
       ],
     },
   ]);
+  const [showList, setShowList] = useState(false);
+  const toggleNestList = () => {
+    setShowList((pre) => !pre);
+  };
   return (
     <ul>
       {nestedData.map((item) => (
-        <li>
+        <li onClick={toggleNestList}>
           {item.text}
-          <ChildComponentNest props={item.children} />
+          {showList && <ChildComponentNest props={item.children} />}
         </li>
       ))}
     </ul>
   );
 };
-
-// const obj =
-// const nestComment = obj => {
-//   for (let i = 0; i < obj.length; i++) {
-//     console.log('SK@', obj[i].text);
-//   }
-// };
