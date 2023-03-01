@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ChildComponentNest } from "./ChildComponentNest";
-export const ParentComponent = () => {
-  const [nestedData] = useState([
+import NodeItem from "./node2";
+
+const NodeListComment = () => {
+  const [nodes, setNodes] = useState([
     {
       text: "eee",
       children: [
@@ -43,18 +44,16 @@ export const ParentComponent = () => {
       ],
     },
   ]);
-  const [showList, setShowList] = useState(false);
-  const toggleNestList = () => {
-    setShowList((pre) => !pre);
-  };
+
   return (
-    <ul>
-      {nestedData.map((item) => (
-        <li onClick={toggleNestList}>
-          {item.text}
-          {showList && <ChildComponentNest props={item.children} />}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {nodes.map((item, index) => {
+          return <NodeItem nodes={item} key={index} />;
+        })}
+      </ul>
+    </div>
   );
 };
+
+export default NodeListComment;
