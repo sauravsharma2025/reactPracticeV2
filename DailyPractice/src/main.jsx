@@ -7,6 +7,10 @@ import { Third } from "./blackTheme/Third";
 import { HavingStyle } from "./MpracticeStyleCompo/havingStyle";
 import Appcc from "./MpracticeStyleCompo/transition";
 import NodeListComment from "./nest";
+import { CallBackRefExample } from "./practiceInterview/callbackRef";
+import { Parent } from "./practiceInterview/Parent";
+import { PureComponent } from "./practiceInterview/PureComponent";
+import { ExampleUseRef } from "./practiceInterview/UseRef";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // const router = createBrowserRouter([
@@ -20,6 +24,4 @@ import NodeListComment from "./nest";
 //     element: <Error />,
 //   },
 // ]);
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <NodeListComment />
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<Parent />);
