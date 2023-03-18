@@ -1,16 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { RouteSet } from "./blackTheme/navigation/routes";
-
-import { Third } from "./blackTheme/Third";
+import { ButtonUI } from "./companyTask/ButtonUI";
+import OTPfunctionality from "./companyTask/OTP";
+import ErrorBoundary from "./ErrorBounderies";
+import HomeView from "./Home.Layout";
 import { HavingStyle } from "./MpracticeStyleCompo/havingStyle";
-import Appcc from "./MpracticeStyleCompo/transition";
-import NodeListComment from "./nest";
-import { CallBackRefExample } from "./practiceInterview/callbackRef";
-import { Parent } from "./practiceInterview/Parent";
-import { PureComponent } from "./practiceInterview/PureComponent";
-import { ExampleUseRef } from "./practiceInterview/UseRef";
+import FetchApiFunction from "./test";
 
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // const router = createBrowserRouter([
@@ -24,4 +20,6 @@ import { ExampleUseRef } from "./practiceInterview/UseRef";
 //     element: <Error />,
 //   },
 // ]);
-ReactDOM.createRoot(document.getElementById("root")).render(<Parent />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <FetchApiFunction />
+);
